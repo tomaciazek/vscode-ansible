@@ -5,6 +5,11 @@ All notable changes to the Ansible VS Code extension will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.5] - 2021-08-08
+### Fixed
+- Files with CRLF line endings will now display and behave correctly. No more
+  weirdly offset highlighting and interactions.
+
 ## [1.0.4] - 2021-08-04
 ### Fixed
 - Paths with special characters are now correctly handled. Both in case of
