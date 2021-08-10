@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.0.6] - 2021-08-10
-### Fixed
+### Changed
 - The configuration file for Ansible Lint is now identified by going up the
   directory structure, starting from the investigated file, and taking the first
   `.ansible-lint` file encountered. This effectively mimics the algorithm
