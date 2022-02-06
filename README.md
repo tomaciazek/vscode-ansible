@@ -1,3 +1,31 @@
+# Deprecation notice
+This extension has been deprecated in favor of
+[Ansible](https://marketplace.visualstudio.com/items?itemName=redhat.ansible)
+extension published by Red Hat.
+
+For more details please see [this discussion](https://github.com/tomaciazek/vscode-ansible/discussions/43).
+
+Let me know in the comments if this extension has helped you ;)
+
+## Migration guide
+1. Uninstall this extension
+2. Reload VS Code (from *Command Palette* or using button visible in the
+   *Extensions* pane next to this extension)
+3. Install the [extension published by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.ansible)
+4. Adjust extension configuration:
+    - The default setting for **Ansible: Use Fully Qualified Collection Names**
+      changed to `true`. If you haven't set it explicitly to `false` and you'd
+      like to retain the old behavior, you'll need to set it to `false`.
+      > NOTE: Official recommendation (in Ansible documentation) is to use FQCNs.
+    - The following settings are no longer available in the **User** scope, you
+      will need to move them to one of the other scopes:
+       - **Ansible: Path**
+       - **Ansible Lint: Path**
+       - **Python: Activation Script**
+       - **Python: Interpreter Path**
+5. Adjust `files.associations` if some of your YAML files get incorrectly
+   associated with Ansible
+
 # Ansible VS Code Extension
 This extension adds language support for Ansible to VS Code.
 
