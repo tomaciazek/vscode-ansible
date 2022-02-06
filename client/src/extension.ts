@@ -7,6 +7,10 @@ import {
   ServerOptions,
   TransportKind,
 } from 'vscode-languageclient/node';
+import {
+  DEPRECATION_DISMISSED,
+  showDeprecationNotification,
+} from './deprecationNotice';
 
 let client: LanguageClient;
 
@@ -39,8 +43,12 @@ export function activate(context: ExtensionContext): void {
     clientOptions
   );
 
+  context.globalState.setKeysForSync([DEPRECATION_DISMISSED]);
+
   // start the client and the server
   client.start();
+
+  showDeprecationNotification(context);
 }
 
 export function deactivate(): Thenable<void> | undefined {
