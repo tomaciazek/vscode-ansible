@@ -24,7 +24,9 @@ Let me know in the comments if this extension has helped you ;)
        - **Python: Activation Script**
        - **Python: Interpreter Path**
 5. Adjust `files.associations` if some of your YAML files get incorrectly
-   associated with Ansible
+   associated with Ansible. And vice versa — some of the Ansible content may end
+   up being automatically picked up by another YAML extension, in which case you
+   will be surprised by seeing unexpected highlighting in those documents.
 
 # Ansible VS Code Extension
 This extension adds language support for Ansible to VS Code.
